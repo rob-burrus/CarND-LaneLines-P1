@@ -26,13 +26,20 @@ Since lane lines generally only appear in a trapezoidal region in the lower half
 
 ![mask](masked.png)
 
-**Hough edge detection**
+**Hough Transform**
+
+![hough](hough.png)
 
 
 **Extrapolate Lane Line Position**
 
+It can be determined which lane line (left vs right) a line segment belongs to by looking at the slope of the line segment. For each side, we average the line segment slopes and intercepts to find the best lane line fit for this frame. We then average the past 5 frames worth of slopes and intercepts to produce our final lane line position. Averaging over previous frames smooths the lane line fit.
+
+![extrapolated](extrapolated.png)
+
 **Apply color and transparency to lines**
 
+![original](original.png)
 
 
 
