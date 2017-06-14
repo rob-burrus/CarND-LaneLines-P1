@@ -6,40 +6,40 @@ A software pipeline that uses traditional computer vision (CV) techniques to ide
 
 **Grayscale** 
 
-![greyscale](greyscale.png)
+![greyscale](output_images/greyscale.png)
 
 **Gaussian Smoothing**
 
 Apply gaussian smoothing before running canny. This is a way of suppressing noise and spurious gradients by averaging. Note: cv2.Canny() applies gaussian smoothing internally, but it is not a changeable parameter, and lane detection can benefit from more smoothing
 
-![gaussian blur](gaussianblur_grey.png)
+![gaussian blur](output_images/gaussianblur_grey.png)
 
 **Canny Edge Detection**
 
 The canny edge detection algorithm will first detect strong edge (strong gradient) pixels above the high_threshold, and reject pixels below the low_threshold. Next, pixels with values between low_threshold and high_threshold will be included as long as they are connected to strong edges. The output is a binary image with white pixels tracing the detected edges and black everywhere else. 
 
-![canny](canny.png)
+![canny](output_images/canny.png)
 
 **Region of interest mask**
 
 Since lane lines generally only appear in a trapezoidal region in the lower half / horizontal center, we can ignore other parts of the image
 
-![mask](masked.png)
+![mask](output_images/masked.png)
 
 **Hough Transform**
 
-![hough](hough.png)
+![hough](output_images/hough.png)
 
 
 **Extrapolate Lane Line Position**
 
 It can be determined which lane line (left vs right) a line segment belongs to by looking at the slope of the line segment. For each side, we average the line segment slopes and intercepts to find the best lane line fit for this frame. We then average the past 5 frames worth of slopes and intercepts to produce our final lane line position. Averaging over previous frames smooths the lane line fit.
 
-![extrapolated](extrapolated.png)
+![extrapolated](output_images/extrapolated.png)
 
 **Apply color and transparency to lines**
 
-![original](original.png)
+![original](output_images/original.png)
 
 
 
