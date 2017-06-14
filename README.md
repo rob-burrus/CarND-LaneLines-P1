@@ -10,13 +10,13 @@ A software pipeline that uses traditional computer vision (CV) techniques to ide
 
 **Gaussian Smoothing**
 
-Apply gaussian smoothing before running canny. This is a way of suppressing noise and spurious gradients by averaging. Note: cv2.Canny() applies gaussian smoothing internally, but it is not a changeable parameter, and lane detection can benefit from more smoothing)
+Apply gaussian smoothing before running canny. This is a way of suppressing noise and spurious gradients by averaging. Note: cv2.Canny() applies gaussian smoothing internally, but it is not a changeable parameter, and lane detection can benefit from more smoothing
 
 ![gaussian blur](gaussianblur_grey.png)
 
 **Canny Edge Detection**
 
-The canny edge detection algorithm will first detect strong edge (string gradient) pixels above the high_threshold, and reject pixels below the low_threshold. Next, pixels with values between low_threshold and high_threshold will be included as long as they are connected to strong edges. The output id a binary image with white pixels tracing the detected edges and black everywhere else. 
+The canny edge detection algorithm will first detect strong edge (strong gradient) pixels above the high_threshold, and reject pixels below the low_threshold. Next, pixels with values between low_threshold and high_threshold will be included as long as they are connected to strong edges. The output is a binary image with white pixels tracing the detected edges and black everywhere else. 
 
 ![canny](canny.png)
 
@@ -27,6 +27,7 @@ Since lane lines generally only appear in a trapezoidal region in the lower half
 ![mask](masked.png)
 
 **Hough edge detection**
+
 
 **Extrapolate Lane Line Position**
 
