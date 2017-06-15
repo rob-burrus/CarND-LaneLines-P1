@@ -6,13 +6,13 @@ A software pipeline that uses traditional computer vision (CV) techniques to ide
 
 **Grayscale** 
 
-![greyscale](output_images/greyscale.png)
+![grayscale](output_images/grayscale.png)
 
 **Gaussian Smoothing**
 
 Apply gaussian smoothing before running canny. This is a way of suppressing noise and spurious gradients by averaging. Note: cv2.Canny() applies gaussian smoothing internally, but it is not a changeable parameter, and lane detection can benefit from more smoothing
 
-![gaussian blur](output_images/gaussianblur_grey.png)
+![gaussian blur](output_images/gaussianblur_gray.png)
 
 **Canny Edge Detection**
 
