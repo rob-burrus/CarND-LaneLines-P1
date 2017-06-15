@@ -1,5 +1,5 @@
 ## Finding Lane Lines on the Road
-A software pipeline that uses traditional computer vision (CV) techniques to identify and track the position of lane lines in a video stream. Note that this project is trained on very specific road and light coniditions and performance can be expected to drop if applied to other scenarios. 
+A software pipeline that uses traditional computer vision (CV) techniques to identify and track the position of lane lines in a video stream. Note that this project is trained on very specific road and light conditions and performance can be expected to drop if applied to other scenarios. 
 
 
 ## Pipeline
